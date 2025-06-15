@@ -2,7 +2,7 @@ use crate::util::color::ColorChoice;
 
 use std::{
     fmt::{self, Display, Formatter},
-    io::{self, Write},
+    io::{self, Write, IsTerminal},
 };
 
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
@@ -149,10 +149,8 @@ impl Default for Style {
 
 #[cfg(feature = "color")]
 fn is_a_tty(stream: Stream) -> bool {
-    let stream = match stream {
-        Stream::Stdout => atty::Stream::Stdout,
-        Stream::Stderr => atty::Stream::Stderr,
-    };
-
-    atty::is(stream)
+    match stream {
+        Stream::Stdout => std::io::stdout().is_terminal(),
+        Stream::Stderr => std::io::stderr().is_terminal(),
+    }
 }

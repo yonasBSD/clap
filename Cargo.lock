@@ -130,7 +130,6 @@ dependencies = [
 name = "clap"
 version = "3.2.25"
 dependencies = [
- "atty",
  "backtrace",
  "bitflags",
  "clap_derive",
