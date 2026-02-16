@@ -23,6 +23,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 <!-- next-header -->
 ## [Unreleased] - ReleaseDate
 
+### Fixes
+
+- `Command::ignore_errors` no longer masks help/version on subcommands
+
 ## [4.5.58] - 2026-02-11
 
 ## [4.5.57] - 2026-02-03
