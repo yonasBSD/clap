@@ -207,16 +207,20 @@ fn subcommand() {
 
 #[test]
 fn help_flag() {
-    static HELP: &str = "\
+    let cmd = Command::new("test").ignore_errors(true);
+
+    utils::assert_output(
+        cmd,
+        "test --help",
+        str![[r#"
 Usage: test
 
 Options:
   -h, --help  Print help
-";
 
-    let cmd = Command::new("test").ignore_errors(true);
-
-    utils::assert_output(cmd, "test --help", HELP, false);
+"#]],
+        false,
+    );
 }
 
 #[test]
