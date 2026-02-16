@@ -229,7 +229,18 @@ fn help_flag_subcommand() {
         .subcommand(Command::new("sub"))
         .ignore_errors(true);
 
-    cmd.try_get_matches_from(["test", "sub", "--help"]).unwrap();
+    utils::assert_output(
+        cmd,
+        "test sub --help",
+        str![[r#"
+Usage: test sub
+
+Options:
+  -h, --help  Print help
+
+"#]],
+        false,
+    );
 }
 
 #[test]
