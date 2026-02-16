@@ -23,6 +23,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 <!-- next-header -->
 ## [Unreleased] - ReleaseDate
 
+## [4.5.59] - 2026-02-16
+
 ### Fixes
 
 - `Command::ignore_errors` no longer masks help/version on subcommands
@@ -4906,7 +4908,8 @@ Minimum version of Rust is now v1.13.0 (Stable)
 * **arg**  allow lifetimes other than 'static in arguments ([9e8c1fb9](https://github.com/clap-rs/clap/commit/9e8c1fb9406f8448873ca58bab07fe905f1551e5))
 
 <!-- next-url -->
-[Unreleased]: https://github.com/clap-rs/clap/compare/v4.5.58...HEAD
+[Unreleased]: https://github.com/clap-rs/clap/compare/v4.5.59...HEAD
+[4.5.59]: https://github.com/clap-rs/clap/compare/v4.5.58...v4.5.59
 [4.5.58]: https://github.com/clap-rs/clap/compare/v4.5.57...v4.5.58
 [4.5.57]: https://github.com/clap-rs/clap/compare/v4.5.56...v4.5.57
 [4.5.56]: https://github.com/clap-rs/clap/compare/v4.5.55...v4.5.56
