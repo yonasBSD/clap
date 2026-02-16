@@ -224,6 +224,15 @@ Options:
 }
 
 #[test]
+fn help_flag_subcommand() {
+    let cmd = Command::new("test")
+        .subcommand(Command::new("sub"))
+        .ignore_errors(true);
+
+    cmd.try_get_matches_from(["test", "sub", "--help"]).unwrap();
+}
+
+#[test]
 fn version_flag() {
     let cmd = Command::new("test").ignore_errors(true).version("0.1");
 
