@@ -140,7 +140,7 @@ impl<'s, F: Fn() -> clap::Command> CompleteEnv<'s, F> {
     /// }
     ///
     /// fn main() {
-    ///     CompleteEnv::with_factory(|| Cli::command())
+    ///     CompleteEnv::with_factory(Cli::command)
     ///         .complete()
     ///
     ///     // ... rest of application logic
