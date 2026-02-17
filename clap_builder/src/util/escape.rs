@@ -5,7 +5,7 @@ pub(crate) struct Escape<'s>(pub(crate) &'s str);
 
 impl<'s> Escape<'s> {
     pub(crate) fn needs_escaping(&self) -> bool {
-        self.0.contains(char::is_whitespace)
+        self.0.is_empty() || self.0.contains(char::is_whitespace)
     }
 
     #[cfg(feature = "help")]

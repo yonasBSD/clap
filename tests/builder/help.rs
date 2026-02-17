@@ -2044,7 +2044,7 @@ fn empty_default_value() {
 Usage: default [OPTIONS]
 
 Options:
-      --arg <argument>  Pass an argument to the program. [default: ]
+      --arg <argument>  Pass an argument to the program. [default: ""]
   -h, --help            Print help
   -V, --version         Print version
 
