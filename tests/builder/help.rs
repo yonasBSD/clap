@@ -2032,6 +2032,27 @@ Options:
 }
 
 #[test]
+fn empty_default_value() {
+    let app = Command::new("default").version("0.1").term_width(120).arg(
+        Arg::new("argument")
+            .help("Pass an argument to the program.")
+            .long("arg")
+            .default_value(""),
+    );
+
+    let expected = str![[r#"
+Usage: default [OPTIONS]
+
+Options:
+      --arg <argument>  Pass an argument to the program. [default: ]
+  -h, --help            Print help
+  -V, --version         Print version
+
+"#]];
+    utils::assert_output(app, "default --help", expected, false);
+}
+
+#[test]
 #[cfg(feature = "wrap_help")]
 fn escaped_whitespace_values() {
     let app1 = Command::new("default").version("0.1").term_width(120).arg(
