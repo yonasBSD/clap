@@ -23,6 +23,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 <!-- next-header -->
 ## [Unreleased] - ReleaseDate
 
+### Fixes
+
+- *(help)* Quote empty default values, possible values
+
 ## [4.5.59] - 2026-02-16
 
 ### Fixes
